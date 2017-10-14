@@ -48,7 +48,7 @@ function init() {
 
 function logic() {
   if (window.targetBoxHash == null) {
-    var minDist = 100000;
+    var minDist = 10000;
     var finalBox;
     for (var property in window.boxes) {
       var dist = window.boxes[property].distanceTo(hero.position);
@@ -70,8 +70,8 @@ function logic() {
 
     if (window.movementDone && window.settings.moveRandomly) {
       window.movementDone = false;
-      window.targetPosition = new Vector2D(MathUtils.random(1000, 10000), MathUtils.random(1000, 10000));
-      window.hero.move(window.targetPosition);
+       window.targetPosition = new Vector2D(MathUtils.random( 100, 20000), MathUtils.random( 100,10000));
+	   window.hero.move(window.targetPosition);
     }
   }
 }
