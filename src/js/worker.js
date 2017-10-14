@@ -48,7 +48,7 @@ function init() {
 
 function logic() {
   if (window.targetBoxHash == null) {
-    var minDist = 10000;
+    var minDist = 100000;
     var finalBox;
     for (var property in window.boxes) {
       var dist = window.boxes[property].distanceTo(hero.position);
